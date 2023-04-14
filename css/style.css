@@ -22,58 +22,82 @@ float: right;
     color: rgb(227, 42, 42);
 }
 .banner01{
-    background: #0e0a0a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     position: relative;
 }
 .banner01 img{
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
-.body{
-    font-family: 'Montserrat', sans-serif;
-    }
+@media (max-width: 768px) {
+  .banner01 {
+    max-width: 100%;
+  }
+}
+.boton {
+  position: absolute; 
+  top: 100%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  padding: 12px 24px; 
+  background-color: rgb(227, 42, 42); 
+  color: #ffffff; 
+  text-decoration: none; 
+}
+@media (max-width: 768px) {
+  .boton {
+  font-size: 24px;
+  }
+}
 .banner-text {
-    text-align: center; 
-    font-family: comfortaa;
-    color: #ffffff; 
-    font-size: 8rem; 
-    position: absolute;
-      }
-.banner-text1 {
-    text-align: center;
-    top: 65%;
-    font-family: montserrat; 
-    color: #ffffff; 
-    font-size: 2rem; 
-    position: absolute;
-      }
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+  text-align: center;  
+ }
 
-      .iconos {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 5px; 
-        justify-items: center; 
-        align-items: center; 
-        padding-left: 35%;
-        padding-right: 35%;
-      }
+ .banner-text h1 {
+  font-family: comfortaa;
+  font-size: 140px; 
+  margin-bottom: 10px;
+  color: white;
+}
+.banner-text h2 {
+  font-family: montserrat;
+  font-weight: 700;
+  font-size: 35px; 
+  color: white;
+}
+ @media (max-width: 768px) {
+   .banner-text {
+   font-size: 24px;
+   }
+ }
+.body{
+  font-family: 'Montserrat', sans-serif;
+    }
+.iconos {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); 
+   gap: 5px; 
+   justify-items: center; 
+   align-items: center; 
+   padding-left: 35%;
+    padding-right: 35%;
+   }
+    
+.icono {
+    text-align: center;
+    }
       
-      .icono {
-        text-align: center;
-      }
+ .icono img {
+    max-width: 30%; 
+ }
       
-      .icono img {
-        max-width: 30%; 
-      }
-      
-      .icono h2 {
-        margin-top: 15px; 
-      }
+ .icono h2 {
+    margin-top: 15px; 
+   }
 .reserva{
     background: lightgray;
 }
