@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" 
+    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Reservas</title>
+</head>
+<body>
+    <div class="container">
+    <h3>Reservas</h3>
+        <div class="PrimerPaso">
+            <h3> Paso 1 </h3>
+            <h3> Datos Personales </h3>
+            <form action="#">
+                <input type="text" placeholder="Nombre" id="nombre" required>
+                <input type="text" placeholder="Apellido" id="apellido" required>
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="tel" placeholder="Nro de contacto" id="tel" required>
+            </form>
+            <button id="siguientepaso1"> Siguiente </button>    
+        </div>
+        <div class="SegundoPaso">
+            <h3> Paso 2 </h3>
+            <h3> Datos de reserva </h3>
+            <form action="#">
+                <label for=""> Fecha y franja horaria </label>
+                <br>
+                <input type="date" id="fecha">
+                <select name="" id="horario">
+                    <option value="20:30 - 21:30"> 20:30 - 21:30 </option>
+                    <option value="21:30 - 22:30"> 21:30 - 22:30 </option>
+                    <option value="22:30 - 23:30"> 22:30 - 23:30 </option>
+                    <option value="23:30 - 00:30"> 23:30 - 00:30 </option>
+                </select>
+                <br>
+                <label for=""> Grupo </label>
+                <br>
+                <input type="text" placeholder="Cantidad de personas" id="comensales">
+                <label for=""> Lugar </label>
+                <select name="" id="lugar">
+                    <option value="Mesa salón"> Mesa salón</option>
+                    <option value="Barra giratoria"> Barra giratoria </option>
+                    <option value="Patio"> Patio </option>
+                </select>
+                <br>
+                <label for=""> Consideraciones especiales </label>
+                <br>
+                <label for=""> ¿Hay comensales celíacos? </label>
+                <input type="checkbox" name="" id="celiaco">
+                <input type="text" id="cantceliacos" placeholder="¿Cuantos?" disabled>
+                <br>
+                <label for=""> ¿Hay alergías en el grupo?</label>
+                <input type="checkbox" name="" id="alergias">
+                <input type="text" id="cualalergia" placeholder="¿Cuales/a que ingrediente?" disabled>
+                <br>
+                <label for=""> Comentarios Adicionales </label><br>
+                <input type="text" name="" id="comentarios">
+            </form>
+            <br>
+            <button id="pasoanterior1"> Paso anterior </button>
+            <button id="siguientepaso2"> Siguiente </button>
+        </div>
+        <div class="Resumen">
+            <h3> Resumen </h3>
+            <label for=""> Nombre </label><label for=""> Apellido </label>
+            <label for=""> Email </label><label for=""> Número de contacto </label><br>
+            <label for="" id="rnombre"> - </label><label for="" id="rapellido"> - </label>
+            <label for="" id="remail"> - </label><label for="" id="rtel"> - </label>
+            <hr>
+            <label for=""> Fecha </label><label for=""> Horario </label><br>
+            <label for="" id="rfecha"> - </label><label for="" id="rhorario"> - </label><br>
+            <label for=""> Cantidad de comensales: </label><label for=""> Lugar </label><br>
+            <label for="" id="rcomensales"> - </label><label for="" id="rlugar"> - </label>
+            <hr>
+            <label for=""> Consideraciones Especiales </label><br>
+            <label for=""> Celíacos? </label><label for="" id="rceliaco"> - </label><br>
+            <label for=""> Alergicos? </label><label for="" id="ralergia"> - </label><br>
+            <label for=""> Comentarios Adicionales </label><label for="" id="rcomentarios"></label>
+            <hr>
+            <button id="pasoanterior2"> Paso anterior </button>
+            <button id="confirmar"> Confirmar </button>
+            <hr>
+        </div>
+    <a href="index.html"> Volver </a>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
