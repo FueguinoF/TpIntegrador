@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.4.js" 
     integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Reservas</title>
 </head>
 <body>
@@ -58,7 +58,7 @@
                 <input type="text" id="cualalergia" placeholder="¿Cuales/a que ingrediente?" disabled>
                 <br>
                 <label for=""> Comentarios Adicionales </label><br>
-                <input type="text" name="" id="comentarios">
+                <textarea name="" id="comentarios" cols="30" rows="6"></textarea>
             </form>
             <br>
             <button id="pasoanterior1"> Paso anterior </button>
@@ -83,10 +83,12 @@
             <hr>
             <button id="pasoanterior2"> Paso anterior </button>
             <button id="confirmar"> Confirmar </button>
+            <button id="pdf"> Descargar como PDF </button>
             <hr>
         </div>
     <a href="index.html"> Volver </a>
     </div>
-    <script src="/app.js"></script>
+    <script src="./app.js"></script>
+    <!--<script src="./jspdf.es.min.js"></script>-->
 </body>
 </html>

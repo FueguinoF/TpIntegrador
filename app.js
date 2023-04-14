@@ -1,3 +1,6 @@
+//import { jsPDF } from "./jspdf.es.min";
+//jsPDF = require("./jspdf.es.min")
+
 $(document).ready(function(){
     $(".SegundoPaso").hide()
     $(".Resumen").hide()
@@ -72,14 +75,31 @@ $(document).ready(function(){
         else{
             $("#ralergia").prop("innerText" , "No ")
         }
-        if($("#comentarios").prop("value","2")){
-            alert("vacio")
+        if($("#comentarios").val()==""){
             $("#rcomentarios").prop("innerText" , "-")
         }
         else{
-            alert("con texto")
             $("#rcomentarios").prop("innerText" , $("#comentarios").prop("value"))
-        }
-        
+        } 
     })
 });
+
+$(document).ready(function(){
+    $("#confirmar").on("click", function(){
+        var conf = window.confirm("¿Desea confirmar la solicitud de su reserva?")
+        if(conf){
+            alert("Su solicitud fue enviada, en las siguientes 24hs recibirá la confirmación de su reserva o las opciones para modificar. Muchas gracias")
+            location.reload()
+        }
+    })
+});
+
+/*
+$(document).ready(function(){
+    $("#pdf").on("click" , function(){
+        var doc = new jsPDF()
+        doc.text(10,10, "Hello")
+        doc.save("file.pdf")
+    })
+});
+*/
