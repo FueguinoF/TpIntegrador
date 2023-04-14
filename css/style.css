@@ -1,3 +1,6 @@
+.body{
+  font-family: Montserrat;
+}
 .header{
     background: white;
     padding: 10px;
@@ -39,14 +42,16 @@ float: right;
   top: 100%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
-  padding: 12px 24px; 
+  padding: 10px 20px; 
   background-color: rgb(227, 42, 42); 
   color: #ffffff; 
-  text-decoration: none; 
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer; 
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .boton {
-  font-size: 24px;
+  font-size: 14px;
   }
 }
 .banner-text {
@@ -70,13 +75,15 @@ float: right;
   color: white;
 }
  @media (max-width: 768px) {
-   .banner-text {
-   font-size: 24px;
+   .banner-text h1 {
+   font-size: 14px;
    }
  }
-.body{
-  font-family: 'Montserrat', sans-serif;
-    }
+ @media (max-width: 768px) {
+  .banner-text h2 {
+  font-size: 14px;
+  }
+}
 .iconos {
    display: grid;
    grid-template-columns: repeat(4, 1fr); 
@@ -94,10 +101,44 @@ float: right;
  .icono img {
     max-width: 30%; 
  }
-      
  .icono h2 {
     margin-top: 15px; 
    }
+
+.containernos {
+    overflow: hidden; 
+  }
+.titulo02{
+  float: left;
+  text-align: left;
+}
+.subtitulo02{
+  float: left;
+  text-align: left;
+}
+.parrafo{
+  float: left;
+  width: 27%;
+  text-align: left;
+  margin-top: 20px;
+}
+.boton01 {
+  position: absolute; 
+  botttom: 30%;
+  left: 20%;
+  background-color: rgb(227, 42, 42); 
+  color: #ffffff; 
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer; 
+}
+  .rammen {
+    float: right;
+    margin:0 0 2em 1em;
+    vertical-align:text-bottom
+    
+  }
 .reserva{
     background: lightgray;
 }
