@@ -105,46 +105,65 @@ float: right;
     margin-top: 15px; 
    }
 
-.containernos {
-    overflow: hidden; 
-  }
-.titulo02{
-  float: left;
-  text-align: left;
-}
-.subtitulo02{
-  float: left;
-  text-align: left;
-}
-.parrafo{
-  float: left;
-  width: 27%;
-  text-align: left;
-  margin-top: 20px;
-}
-.boton01 {
-  position: absolute; 
-  botttom: 30%;
-  left: 20%;
-  background-color: rgb(227, 42, 42); 
-  color: #ffffff; 
-  border: none;
-  text-decoration: none;
-  font-weight: 700;
-  cursor: pointer; 
-}
-  .rammen {
-    float: right;
-    margin:0 0 2em 1em;
-    vertical-align:text-bottom
+   .containernos {
+    display: flex;
     
   }
+  
+  .contentnos {
+    flex: 1;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: flex-start; 
+    height: 100px;
+  }
+  
+  .titulo02 {
+   font-weight: 700;
+    margin: 0 0 10px;
+    
+  }
+  
+  .subtitulo02 {
+    font-weight: 700;
+    margin: 25px 0 10px;
+   
+  }
+  
+  .parrafo {
+    padding-top: 2%;
+    font-weight: 400;
+    margin: 20px 0 20px;
+    
+  }
+  
+  .button01 {
+    font-size: 16px;
+    margin: 20px 0 25px;
+    background-color: rgb(227, 42, 42);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .image01 {
+    flex: 1;
+
+    text-align: right;
+  }
+  
+  .image01 img {
+    max-width: 100%;
+    height: auto;
+  }
 .reserva{
-    background: lightgray;
+    background:rgb(158, 126, 126);
+    color: #ffffff;
 }
 
 .mapa-contenido {
-    width: 940px;
+    width: 100%;
     margin: 0 auto;
     }
 
