@@ -1,7 +1,5 @@
-//import { jsPDF } from "./jspdf.es.min";
-//jsPDF = require("./jspdf.es.min")
 
-$(document).ready(function(){
+$(document).ready(function(){   
     $(".SegundoPaso").hide()
     $(".Resumen").hide()
 });
@@ -39,12 +37,39 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#siguientepaso1").on("click", function(){
-        $(".PrimerPaso").hide()
-        $(".SegundoPaso").show()
-        $("#rnombre").prop("innerText" , $("#nombre").prop("value"))
-        $("#rapellido").prop("innerText" , $("#apellido").prop("value"))
+        var val = 0
+        if($("#nombre").val() == ""){
+            alert("El campo nombre es obligatorio, por favor ingrese su nombre")
+            $("#nombre").focus()
+            val = 0
+        }
+        else{
+            $("#rnombre").prop("innerText" , $("#nombre").prop("value"))
+            val += 1
+        }
+        if($("#apellido").val() == ""){
+            alert("El campo apellido es obligatorio, por favor ingrese su apellido")
+            $("#apellido").focus()
+            val = 0
+        }
+        else{
+            $("#rapellido").prop("innerText" , $("#apellido").prop("value"))
+            val += 1
+        }
         $("#remail").prop("innerText" , $("#email").prop("value"))
-        $("#rtel").prop("innerText" , $("#tel").prop("value"))
+        if($("#tel").val() == "" || isNaN($("#tel").val())){
+            alert("El campo teléfono es obligatorio, por favor ingrese un número válido")
+            $("#tel").focus()
+            val = 0
+        }
+        else{
+            $("#rtel").prop("innerText" , $("#tel").prop("value"))
+            val += 1
+        }
+        if (val == 3){
+            $(".PrimerPaso").hide()
+            $(".SegundoPaso").show()
+        }                                                                
     })
 });
 
@@ -57,8 +82,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#siguientepaso2").on("click", function(){
-        $(".SegundoPaso").hide()
-        $(".Resumen").show()
+        
         $("#rfecha").prop("innerText" , $("#fecha").prop("value"))
         $("#rhorario").prop("innerText" , $("#horario").prop("value"))
         $("#rcomensales").prop("innerText" , $("#comensales").prop("value"))
@@ -80,7 +104,9 @@ $(document).ready(function(){
         }
         else{
             $("#rcomentarios").prop("innerText" , $("#comentarios").prop("value"))
-        } 
+        }
+        $(".SegundoPaso").hide()
+        $(".Resumen").show() 
     })
 });
 
@@ -93,13 +119,3 @@ $(document).ready(function(){
         }
     })
 });
-
-/*
-$(document).ready(function(){
-    $("#pdf").on("click" , function(){
-        var doc = new jsPDF()
-        doc.text(10,10, "Hello")
-        doc.save("file.pdf")
-    })
-});
-*/
