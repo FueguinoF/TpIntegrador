@@ -3,8 +3,19 @@ $(document).ready(function(){
     $(".SegundoPaso").hide()
     $(".Resumen").hide()
     let d = new Date()
-    let dd = d.getFullYear() + "-" + "0" + (d.getMonth() + 1) + "-" + d.getDate() 
-    $("#fecha").prop("min", dd)
+    if(d.getDate() < 10){           //Si el dia es menor del 10 lo muestra con un solo dígito
+        var da = "0" + d.getDate    //y rompe el formato que acepta la prop min del calendario
+    }else{
+        da = d.getDate()
+    }
+    if(d.getMonth() < 10){          // idem con el mes, en este caso date.getMonth() devuelve un numero
+        var dm = "0" + (d.getMonth() + 1) // menor por un valor así que le sumo uno para que el valor devuelto
+    }else{                                 //corresponda al numero de mes actual
+        dm = (d.getMonth() + 1)
+    }
+    let dd = d.getFullYear() + "-" + dm + "-" + da //armo la cadena con yyyy-mm-dd para el formato que acepta
+    $("#fecha").prop("min", dd)         //la prop min del calendario y la establezco como tal
+    $("#fecha").prop("defaultValue", dd) //Y la establezco tambien como valor default
 });
 
 $(document).ready(function(){
@@ -146,8 +157,49 @@ $(document).ready(function(){
     $("#confirmar").on("click", function(){
         var conf = window.confirm("¿Desea confirmar la solicitud de su reserva?")
         if(conf){
-            alert("Su solicitud fue enviada, en las siguientes 24hs recibirá la confirmación de su reserva o las opciones para modificar. Muchas gracias")
+            alert("Su solicitud fue enviada, en las siguientes 24 hs recibirá la confirmación de su reserva o las opciones para modificar. Muchas gracias")
             location.reload()
+        }
+    })
+});
+
+$(document).ready(function(){
+    $("#cenviar").on("click", function(){
+        var val3 = 0
+        if($("#cnombre").val()==""){
+            alert("Debe ingresar un nombre para el contacto, intente nuevamente por favor")
+            val3 = 0
+            $("#cnombre").focus()
+        }else{
+            val3 += 1
+        }
+        if($("#capellido").val()==""){
+            alert("Debe ingresar un apellido para el contacto, intente nuevamente por favor")
+            val3 = 0
+            $("#capellido").focus()
+        }else{
+            val3 += 1
+        }
+        if($("#ctel").val()=="" || isNaN($("#ctel").val())){
+            alert("Debe ingresar un número válido para el contacto, intente nuevamente por favor")
+            val3 = 0
+            $("#ctel").focus()
+        }else{
+            val3 += 1
+        }
+        if($("#cmensaje").val()==""){
+            alert("Debe ingresar un mensaje para su consulta, por favor ingrese de nuevo")
+            val3 = 0
+            $("#cmensaje").focus()
+        }else{
+            val3 += 1
+        }
+        if(val3 == 4){
+            var conf2 = window.confirm("¿Desea confirmar el envío de su consulta?")
+            if(conf2){
+                alert("Su consulta fue enviada, en las siguientes 24 hs estaremos contactándolo con la respuesta. Muchas gracias")
+                location.reload()
+            }
         }
     })
 });
