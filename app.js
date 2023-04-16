@@ -2,6 +2,9 @@
 $(document).ready(function(){   
     $(".SegundoPaso").hide()
     $(".Resumen").hide()
+    let d = new Date()
+    let dd = d.getFullYear() + "-" + "0" + (d.getMonth() + 1) + "-" + d.getDate() 
+    $("#fecha").prop("min", dd)
 });
 
 $(document).ready(function(){
@@ -82,22 +85,49 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#siguientepaso2").on("click", function(){
-        
-        $("#rfecha").prop("innerText" , $("#fecha").prop("value"))
+        var val2 = 0 
+        if($("#fecha").val() == ""){
+            alert("Debe seleccionar una fecha válida, por favor intente de nuevo")
+            val2 = 0
+        }else{
+            $("#rfecha").prop("innerText" , $("#fecha").prop("value"))
+            val2 += 1
+        }
         $("#rhorario").prop("innerText" , $("#horario").prop("value"))
-        $("#rcomensales").prop("innerText" , $("#comensales").prop("value"))
+        if($("#comensales").val()=="" || isNaN($("#comensales").val()) ){
+            alert("Debe introducir un número válido de comensales, por favor intente de nuevo")
+            $("#comensales").focus()
+            val2 = 0
+        }else{
+            $("#rcomensales").prop("innerText" , $("#comensales").prop("value"))
+            val2 += 1
+        }
         $("#rlugar").prop("innerText" , $("#lugar").prop("value"))
-        if($("#celiaco").is(":checked")){
-            $("#rceliaco").prop("innerText" , "Si, " + $("#cantceliacos").prop("value"))
+        if(($("#celiaco").is(":checked") && $("#cantceliacos").val() == "") || ($("#celiaco").is(":checked") && isNaN($("#cantceliacos").val()))){
+            alert("Debe introducir una cantidad de comensales celíacos, por favor intente de nuevo")
+            $("#cantceliacos").focus()
+            val2 = 0 
+        }else{
+            if($("#celiaco").is(":checked")){
+                $("#rceliaco").prop("innerText" , "Si, " + $("#cantceliacos").prop("value"))
+                val2 += 1
+            }else{
+                $("#rceliaco").prop("innerText" , "No ")
+                val2 += 1
+            }
         }
-        else{
-            $("#rceliaco").prop("innerText" , "No ")
-        }
-        if($("#alergias").is(":checked")){
-            $("#ralergia").prop("innerText" , "Si, " + $("#cualalergia").prop("value"))
-        }
-        else{
-            $("#ralergia").prop("innerText" , "No ")
+        if($("#alergias").is(":checked") && $("#cualalergia").val() == ""){
+            alert("Debe introducir a que ingrediente existen alergías, por favor intente de nuevo")
+            $("#cualalergia").focus()
+            val2 = 0 
+        }else{
+            if($("#alergias").is(":checked")){
+                $("#ralergia").prop("innerText" , "Si, " + $("#cualalergia").prop("value"))
+                val2 += 1
+            }else{
+                $("#ralergia").prop("innerText" , "No ")
+                val2 += 1
+            }
         }
         if($("#comentarios").val()==""){
             $("#rcomentarios").prop("innerText" , "-")
@@ -105,8 +135,10 @@ $(document).ready(function(){
         else{
             $("#rcomentarios").prop("innerText" , $("#comentarios").prop("value"))
         }
-        $(".SegundoPaso").hide()
-        $(".Resumen").show() 
+        if(val2 == 4){
+            $(".SegundoPaso").hide()
+            $(".Resumen").show() 
+        }
     })
 });
 
