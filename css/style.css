@@ -3,7 +3,7 @@
 }
 .header{
     background: white;
-    padding: 10px;
+    padding: 0.625em;
     position: fixed;
     top:0;
     left: 0;
@@ -51,7 +51,7 @@ float: right;
 }
 @media screen and (max-width: 768px) {
   .boton {
-  font-size: 14px;
+  font-size: 0.625em;
   }
 }
 .banner-text {
@@ -64,24 +64,24 @@ float: right;
 
  .banner-text h1 {
   font-family: comfortaa;
-  font-size: 140px; 
+  font-size: 8.75em; 
   margin-bottom: 10px;
   color: white;
 }
 .banner-text h2 {
   font-family: montserrat;
   font-weight: 700;
-  font-size: 35px; 
+  font-size: 2.188em; 
   color: white;
 }
  @media (max-width: 768px) {
    .banner-text h1 {
-   font-size: 14px;
+   font-size: 3em;
    }
  }
  @media (max-width: 768px) {
   .banner-text h2 {
-  font-size: 14px;
+  font-size: 0.875em;
   }
 }
 .iconos {
@@ -111,27 +111,32 @@ float: right;
   }
   .contentnos {
     flex: 1;
-    padding: 20px;
+    padding: 8%;
     align-items: flex-start; 
     height: 100px;
   }
   .titulo02 {
-   font-weight: 700;
+    font-family: montserrat;
+    font-size: 2.3em;
+    font-weight: 700;
     margin: 10px 0 10px;
     
   }
   .subtitulo02 {
+    font-size: montserrat;
+    font-size: 2em;
     font-weight: 700;
     margin: 10px 0 30px;
     padding-top: 20px;
   }
   .parrafo {
+    font-size: 0.875em;
     padding-top: 2%;
     font-weight: 400;
     margin: 5px 0 20px; 
   }
   .button01 {
-    font-size: 16px;
+    font-size: 1em;
     margin-bottom: 30px ;
     background-color: rgb(227, 42, 42);
     color: #fff;
@@ -139,6 +144,7 @@ float: right;
     border: none;
     text-decoration: none;
     cursor: pointer; 
+    border-radius: 5px;
   }
   .image01 {
     flex: 1;
@@ -148,50 +154,51 @@ float: right;
     max-width: 100%;
     height: auto;
   }
-  .containernos01 {
-    display: flex;
-    background-color: rgb(26, 3, 3);
-    color: #fff; 
-    padding: 10%;
-  }
-  .contentnos01 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%) ;
-    text-align: center;   
-    height: 100px;
-  }
-  .titulo03 {
-   font-weight: 700;
-    margin: 10px 0 10px;
-    
-  }
-  .parrafo01 {
-    padding-top: 2%;
-    font-weight: 400;
-    margin: 5px 0 20px; 
-  }
-  .button03 {
-    font-size: 16px;
-    margin-bottom: 30px ;
-    background-color: rgb(227, 42, 42);
-    color: #fff;
-    padding: 10px 10px;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    
-  }
-  
-  .boton03 {
-    flex: 1;
+   .reservas {
+    position: relative;
     text-align: center;
-    margin-top: 10%;
+    height: 100%;
+  }
+   .reservas-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .reservas-titulo {
+    font-family: montserrat;
+    font-weight: 700;
+    font-size: 2.3em;
+    margin: 0;
+    color: #fff;
   }
   
-  .boton03 img {
-  max-width: 100%;
-  height: auto;
+  .reservas-parrafo {
+    font-family: montserrat;
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    color:#fff;
+  }
+  
+  .reservas-button {
+    background-color: rgb(227, 42, 42);
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reservas-imagen {
+    width: 100%;
+    height: 80%;
   }
 .destacados{
   padding: 10% 0 2% 1%;
@@ -223,7 +230,10 @@ float: right;
 .slider-list {
   animation: slider 10s infinite;
 }
-
+@media screen and (max-width: 768px) {
+  .slider { width:fit-content;
+       }
+     }
 .mapa-contenido {
   width: 980px;
     margin: 0 auto;
