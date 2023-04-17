@@ -6,12 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.4.js" 
     integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleforms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <title> Contacto </title>
 </head>
 <body>
+    <header class="header">
+        <img class="logo" src="./img/logo.png" alt="Logo de Shin'ya Shokudo">
+          <nav class="menu-flotante">  
+            <a class="enlace" href="./index.html">Principal</a>
+            <a class="enlace" href="reservas.html">Reservas</a>
+            <a class="enlace" href="./index.html#nosotros">Nosotros</a>
+            <a class="enlace" href="./index.html#ubicacion">Ubicación</a>
+            <a class="enlace" href="./index.html#destacados">Destacados del Chef</a>
+         </nav>   
+        </header>
     <div class="container">
-    <h3> Contacto </h3>
+    <h2 class="titulo-reservas"> Contacto </h2>
         <div class="FormContacto">
             <h3> Datos de contacto </h3>
             <form action="#">
@@ -25,11 +40,22 @@
                 <input type="email" id="cemail"><br>
                 <label for=""> Ingrese su mensaje o consulta </label><br>
                 <textarea name="" id="cmensaje" cols="30" rows="6"></textarea><br>
-                <button id="cenviar"> Enviar </button>
+                <button class="cenviar" id="cenviar"> Enviar </button>
             </form>
         </div>
-    <a href="./index.html"> Volver </a>
+    <a class="enlace" href="./index.html"> Volver </a>
     </div>
     <script src="./app.js"></script>
+    <footer id="footer">
+        <div class="containernos01">
+          <p class="info">Av. Chivilcoy 1746, CABA
+          Buenos Aires, Argentina
+          +5491131291023
+          info@shinyashokudo.com</p>
+        </div>
+        <section class="second-footer"> 
+          <p class="footer-text">Powered by Francisco, Luciana y Adrian - Grupo 4 - Prof. Marcos Cielo</p>
+        </section>
+      </footer>
 </body>
 </html>

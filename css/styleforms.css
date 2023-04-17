@@ -1,0 +1,33 @@
+.body{
+    font-family: montserrat;
+ 
+}
+.container{
+    background-color: black;
+    color: #fff;
+    font-family: montserrat;
+    font-weight: 400;
+    padding-left: 10%;
+    padding-top: 15%;
+
+}
+.titulo-resevas{
+    font-family: comfortaa;
+    margin-bottom: 10px;
+
+}
+.formulario {
+    border-radius: 20px; 
+    
+}
+.cenviar {
+    font-size: 16px;
+    margin-bottom: 30px ;
+    background-color: rgb(227, 42, 42);
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
