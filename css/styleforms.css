@@ -9,23 +9,47 @@
     font-weight: 400;
     padding-left: 10%;
     padding-top: 15%;
+    padding: 8%;
+}
 
+.container h2, .container h3{
+    padding: 6px;
+}
+
+.container input, .container select, .container textarea{
+    border-radius: 10px;
 }
 .titulo-resevas{
     font-family: comfortaa;
     margin-bottom: 10px;
-
 }
+
 .formulario {
     border-radius: 20px; 
-    
 }
-#cenviar {
+
+.formulario label  {
+    padding-right: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.formulario2 label{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.formulario3 label{
+    padding-right: 110px;
+}
+
+#cenviar, #siguientepaso1, #siguientepaso2 , #pasoanterior1, #pasoanterior2{
     font-size: 16px;
     margin-bottom: 30px ;
     background-color: rgb(227, 42, 42);
     color: #fff;
     padding: 10px 10px;
+    margin-top: 10px;
     border: none;
     text-decoration: none;
     cursor: pointer;
