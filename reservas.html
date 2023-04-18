@@ -16,26 +16,22 @@
 </head>
 <body>
     <header class="header">
-        <img class="logo" src="./img/logo.png" alt="Logo de Shin'ya Shokudo">
-          <nav class="menu-flotante">  
-            <a class="enlace" href="index.html">Principal</a>
-            <a class="enlace" href="./index.html#nosotros">Nosotros</a>
-            <a class="enlace" href="./index.html#ubicacion">Ubicación</a>
-            <a class="enlace" href="./index.html#destacados">Destacados del Chef</a>
-            <a class="enlace" href="./contacto.html">Contacto</a>
-         </nav>   
-        </header>
-
+        <a href="./index.html"><img class="logo" src="./img/logo.png" alt="Logo de Shin'ya Shokudo"></a>
+    </header>
     <div class="container">
     <h2 class="titulo-reservas">Reservas</h2>
         <div class="PrimerPaso">
             <h3> Paso 1 </h3>
             <h3> Datos Personales </h3>
             <form class="formulario" action="#">
-                <input type="text" placeholder="Nombre" id="nombre">
-                <input type="text" placeholder="Apellido" id="apellido">
-                <input type="email" placeholder="Email" id="email">
-                <input type="tel" placeholder="Nro de contacto" id="tel">
+                <label for=""> Nombre </label>
+                <label for=""> Apellido</label>
+                <label for=""> Email </label>
+                <label for=""> Teléfono de contacto </label><br>
+                <input type="text" id="nombre">
+                <input type="text" id="apellido">
+                <input type="email" id="email">
+                <input type="tel" id="tel">
             </form>
             <button class="cenviar" id="siguientepaso1"> Siguiente </button>   
         </div>
