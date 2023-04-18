@@ -48,6 +48,7 @@ float: right;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer; 
+  border-radius: 5px;
 }
 @media screen and (max-width: 768px) {
   .boton {
@@ -106,7 +107,7 @@ float: right;
    }
    .containernos {
     display: flex;
-    padding-bottom: 10%;
+    padding-bottom: 15%;
     padding-top: 5%;
   }
   .contentnos {
@@ -215,7 +216,7 @@ padding-bottom: 5%;
 }
 .slider {
   margin-right: 50%;
-  max width: 615px; 
+  max-width: 615px; 
   overflow: hidden; 
 }
 .slider-list {
@@ -244,67 +245,72 @@ padding-bottom: 5%;
   .slider { width:fit-content;
        }
      }
+
 .mapa-contenido {
   width: 980px;
-    margin: 0 auto;
-    padding: 10%;
+  margin: 0 auto;
+  padding: 10%;
     }
+.mapa-titulo{
+  padding-bottom: 3%;
+  font-family: montserrat;
+  font-weight: 700;
+  font-size: 2.3em;
+  text-align: center;
+      
+          }
 @media screen and (max-width: 768px) {
  .mapa-contenido { width: auto;
       }
     }
-
-    .main-footer {
-      background-color: #000;
-      color: #fff;
-      padding: 3em 0;
-    }
-    
     .footer-container {
-      max-width: 1140px;
-      margin: 0 auto;
+      background-color: black;
+      color: #fff;
       display: flex;
       flex-wrap: wrap;
+      justify-content: left;
+      align-items: left;
+      padding: 8%;
     }
     
-    .row {
+    .footer-icons {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+      width: 30%;
     }
     
-    .col-md-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
-      padding: 0 1em;
+    .footer-icons i {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 10px;
     }
     
-    .image-wrapper {
+    .footer-text01 {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 70%;
+      
+    }
+    .footer-text01 p {
+      margin-bottom: 10px;
     }
     
-    .image-wrapper img {
-     margin-bottom: 1em;
-    }
-        .text-wrapper {
-      margin-top: 0.3em;
-    }
-        .image-wrapper-right {
-      margin-top: 0.3em;
-      text-align: right;
-    }
-    .image-wrapper-right img {
-            max-width: 300px;
-    }
-    
-    @media only screen and (max-width: 767px) {
-      .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        text-align: center;
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: no-wrap;
       }
-      .image-wrapper-right {
-        text-align: center;
+      
+      .footer-icons {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .footer-text01 {
+        width: 100%;
       }
     }
 .second-footer{
