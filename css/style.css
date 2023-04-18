@@ -201,12 +201,21 @@ float: right;
     height: 80%;
   }
 .destacados{
-  padding: 10% 0 2% 1%;
+  padding: 8%;
   
 }
+.destacados-titulo{
+padding-bottom: 3%;
+font-family: montserrat;
+font-weight: 700;
+font-size: 2.3em;
+}
+.destacados-parrafo{
+padding-bottom: 5%;
+}
 .slider {
-  margin-right: 60%;
-  max-width: 615px; 
+  margin-right: 50%;
+  max width: 615px; 
   overflow: hidden; 
 }
 .slider-list {
@@ -214,7 +223,8 @@ float: right;
   transition: transform 0.5s ease-in-out; 
 }
 .slider-item {
-  flex: 0 0 100%; 
+  flex: 0 0 100%;
+  
 }
 @keyframes slider {
   0% { transform: translateX(0%); }
@@ -243,10 +253,60 @@ float: right;
  .mapa-contenido { width: auto;
       }
     }
-.info{
-text-align: left;
-margin-left: 3%;
-  }
+
+    .main-footer {
+      background-color: #000;
+      color: #fff;
+      padding: 3em 0;
+    }
+    
+    .footer-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 1em;
+    }
+    
+    .image-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .image-wrapper img {
+     margin-bottom: 1em;
+    }
+        .text-wrapper {
+      margin-top: 0.3em;
+    }
+        .image-wrapper-right {
+      margin-top: 0.3em;
+      text-align: right;
+    }
+    .image-wrapper-right img {
+            max-width: 300px;
+    }
+    
+    @media only screen and (max-width: 767px) {
+      .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+      }
+      .image-wrapper-right {
+        text-align: center;
+      }
+    }
 .second-footer{
 position: relative;
 background-color:rgb(227, 42, 42);
