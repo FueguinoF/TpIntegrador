@@ -216,9 +216,9 @@ font-size: 2.3em;
 padding-bottom: 5%;
 }
 .slider {
-  margin-right: 50%;
-  max-width: 615px; 
-  overflow: hidden; 
+ 
+  max-width: 38.438em;
+  overflow: hidden;
 }
 .slider-list {
   display: flex; 
@@ -242,7 +242,7 @@ padding-bottom: 5%;
 .slider-list {
   animation: slider 10s infinite;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 38.438em) {
   .slider { width:fit-content;
        }
      }
