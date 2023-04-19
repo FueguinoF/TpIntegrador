@@ -8,6 +8,15 @@
     position: relative;
     padding: 15% 0 15% 8%; ;
 }
+
+.enlace{
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-top: 25px;
+  text-decoration:none;
+  color: rgb(227, 42, 42); /* Esto creo que va con otro color, lo dejo así ahora - Fran */
+}
   
 .fondo {
     position: absolute;
