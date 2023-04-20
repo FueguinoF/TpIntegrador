@@ -14,9 +14,10 @@
   font-weight: 700;
   margin-left: 10px;
   margin-top: 25px;
-  padding-left: 8%;
   text-decoration:none;
   color: rgb(227, 42, 42); /* Esto creo que va con otro color, lo dejo así ahora - Fran */
+  position:relative;
+  
 }
   
 .fondo {
