@@ -18,9 +18,28 @@ $(document).ready(function(){
     $("#fecha").prop("defaultValue", dd) //Y la establezco tambien como valor default
 });
 
+$(document).ready(function(){  //Api clima y hora local
+    $.get("http://api.weatherapi.com/v1/current.json?key=bd715aa1d05f48d8a8643645232004&q=osaka&aqi=no&lang=es", function(osaka){
+        let horal = osaka.location.localtime.split(" ")
+        $("#hora2").prop("innerText", horal[1])
+        $("#tempok").prop("innerText", osaka.current.temp_c + "° C")
+        $("#sensok").prop("innerText", osaka.current.feelslike_c + "° C")
+        $("#condok").prop("innerText", osaka.current.condition.text)
+        $("#imgok").prop("src", osaka.current.condition.icon)
+    })
+    $.get("http://api.weatherapi.com/v1/current.json?key=bd715aa1d05f48d8a8643645232004&q=buenos aires&aqi=no&lang=es", function(bsas){
+        let horal = bsas.location.localtime.split(" ")
+        $("#hora1").prop("innerText", horal[1])
+        $("#tempba").prop("innerText", bsas.current.temp_c + "° C")
+        $("#sensba").prop("innerText", bsas.current.feelslike_c + "° C")
+        $("#condba").prop("innerText", bsas.current.condition.text)
+        $("#imgba").prop("src", bsas.current.condition.icon)
+    })  
+});
+
 $(document).ready(function(){
-    $("#pasoanterior1").on("click", function(){
-        $(".PrimerPaso").show()
+    $("#pasoanterior1").on("click", function(){ //código del boton paso siguiente del segundo paso del
+        $(".PrimerPaso").show()                 //formulario de reservas
         $(".SegundoPaso").hide()
     })
 });
@@ -51,7 +70,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#siguientepaso1").on("click", function(){
-        var val = 0
+        var val = 0 
         if($("#nombre").val() == ""){
             alert("El campo nombre es obligatorio, por favor ingrese su nombre")
             $("#nombre").focus()
