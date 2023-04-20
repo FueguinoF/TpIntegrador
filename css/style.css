@@ -203,7 +203,7 @@ float: right;
     height: 80%;
   }
 .destacados{
-  padding: 8%;
+    padding: 8%;
   
 }
 .destacados-titulo{
@@ -216,7 +216,6 @@ font-size: 2.3em;
 padding-bottom: 5%;
 }
 .slider {
- 
   max-width: 38.438em;
   overflow: hidden;
 }
