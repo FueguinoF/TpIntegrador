@@ -200,7 +200,7 @@ float: right;
     border-radius: 5px;
     cursor: pointer;
   }
- .reservas-imagen {
+.reservas-imagen {
     width: 100%;
     height: 80%;
   }
@@ -211,8 +211,18 @@ font-weight: 700;
 font-size: 2.3em;
 padding-bottom: 1%;
 }
+.subtitulo03 {
+  font-size: montserrat;
+  font-size: 2em;
+  font-weight: 700;
+  padding-right: 3%;
+}
 .destacados-parrafo{
-padding-bottom: 1%
+  font-size: 0.875em;
+  font-weight: 400;
+  margin: 5px; 
+  padding-right: 3%;
+ 
 }
 .slider {
   max-width: 38.438em;

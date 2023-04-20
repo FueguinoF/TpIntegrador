@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/iconos/ico.png" type="png" sizes="128px">
     <script src="https://code.jquery.com/jquery-3.6.4.js" 
     integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 </head>
@@ -93,14 +94,14 @@
         <div class="contentnos">
           <h2 class= "destacados-titulo">Destacados del Chef</h2>
                 <p class="destacados-parrafo">Nuestro menú se compone de cuatro pasos que se renuevan mensualmente para brindar una experiencia única.</p> </p>
-        <h3 class="subitulo02">Okonomiyaki (お好み焼き)  </h3>
+        <h3 class="subitulo03">Okonomiyaki (お好み焼き)  </h3>
         <p class="destacados-parrafo"> Este plato consiste en una masa con varios ingredientes cocinados a la plancha. Se destacan sabores como el natto en chmichurri. </p>
-        <h3 class="subitulo02">Ramen (ラーメン) </h3>
+        <h3 class="subitulo03">Ramen (ラーメン) </h3>
         <p class="destacados-parrafo">Un plato de fideos de origen japonés es una fiesta en el paladar cuando se acompaña con rodajas de chorizo y entraña a la parrilla.</p>
-        <h3 class="subitulo02">Takoyaki (たこ焼き) </h3>
+        <h3 class="subitulo03">Takoyaki (たこ焼き) </h3>
         <p class="destacados-parrafo">Estas bolitas a base de harina de trigo y pulpo dan un giro de 180 grados cuando se embeben en aceite de oliva y se acompañan de salsa criolla.</p>
-        <h3 class="subitulo02">Sushi(すし) </h3>
-        <p class="destacados-parrafo">El sushi es un plato de la gastronomía japonesa con base de arroz condimentado con vinagre y azúcar, con rellenos de lomo, mondongo y morcilla, brindan  un espectáculo sin igual.</p>
+        <h3 class="subitulo03">Sushi(すし) </h3>
+        <p class="destacados-parrafo">El sushi es un plato con base de arroz condimentado con vinagre y azúcar, con rellenos de lomo, mondongo y morcilla, brindan  un espectáculo sin igual.</p>
         </div>
     <div class="sld01">
          <div class="slider">
@@ -117,16 +118,35 @@
     <section id="ubicacion">
         <div class="mapa-contenido"> 
           <h2 class="mapa-titulo">Nuestra Ubicación</h2> 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.4510274598756!2d-58.49724158423622!3d-34.618040865764115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9dafa6127cf%3A0x2746102898c96f1a!2sAv.%20Chivilcoy%201746%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1674707046744!5m2!1ses!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8466977028434!2d-58.451400899999996!3d-34.5574367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb57d98a2c203%3A0x2595cec4a3d01629!2sShin&#39;ya%20Shokudo!5e0!3m2!1ses-419!2sar!4v1682022096844!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            <div id="contenedorAPI">
-              <label for=""> Ciudad </label><label for="" id="bsas"> Buenos Aires, ARG </label><label for="" id="osaka"> Osaka, JPN</label><br>
-              <label for=""> Hora local </label><label for="" id="hora1"> - </label><label for="" id="hora2"> - </label><br>
-              <label for=""> Temperatura </label><label for="" id="tempba"> - </label><label for="" id="tempok"> - </label><br>
-              <label for=""> Sensación Térmica </label><label for="" id="sensba"> - </label><label for="" id="sensok"> - </label><br>
-              <label for=""> Condición </label><label for="" id="condba"></label><label for="" id="condok"></label><br>
-              <img src="" alt="" id="imgba"><img src="" alt="" id="imgok">
-            </div>
+            <div class="contenedorAPI">
+              <div class="row">
+              <div class="column">
+                  <p><label for=""> Ciudad </label></p>
+                <p><label for=""> Hora local </label></p>
+                <p><label for=""> Temperatura </label></p>
+                <p> <label for=""> Sensación Térmica </label></p>
+                <p><label for=""> Condición </label></p>
+              </div>
+              <div class="column">
+                <p><label for="" id="bsas"> Buenos Aires, ARG </label></p>
+                <p><label for="" id="hora1"> - </label></p>
+                <p><label for="" id="tempba"> - </label></p>
+                <p><label for="" id="sensba"> - </label></p>
+                <p><label for="" id="condba"></label></p> 
+                <img src="" alt="veamos" id="imgba">
+              </div>
+              <div class="column">
+                <p><label for="" id="osaka"> Osaka, JPN</label></p>
+                <p><label for="" id="hora2"> - </label></p>
+                <p><label for="" id="tempok"> - </label></p>
+                <p><label for="" id="sensok"> - </label></p>
+                <p><label for="" id="condok"></label></p>
+                <img src="" alt="a ver" id="imgok">
+              </div>
+            </div> 
+          </div>
         </div>
     </section>
    <footer id="pie">
@@ -137,7 +157,7 @@
         <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
       </div>
       <div class="footer-textcontainer">
-      <p class="footer-text01"> Av. Chivilcoy 1746, CABA, Bs.As. Argentina</p>
+      <p class="footer-text01"> Av. Mendoza 1746, CABA, Bs.As. Argentina</p>
       <p class="footer-text01"> info@shinyashokudo.com</p>
       <p  class="footer-text01">+5491131259785</p>
     </div>
