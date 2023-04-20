@@ -1,7 +1,7 @@
 
 $(document).ready(function(){   
-    $(".SegundoPaso").hide()
-    $(".Resumen").hide()
+    $(".SegundoPaso").hide()  //ocultar los pasos que no corresponden al primer paso
+    $(".Resumen").hide()        //del proceso de reservas 
     let d = new Date()
     if(d.getDate() < 10){           //Si el dia es menor del 10 lo muestra con un solo dígito
         var da = "0" + d.getDate    //y rompe el formato que acepta la prop min del calendario
@@ -20,22 +20,24 @@ $(document).ready(function(){
 
 $(document).ready(function(){  //Api clima y hora local
     $.get("http://api.weatherapi.com/v1/current.json?key=bd715aa1d05f48d8a8643645232004&q=osaka&aqi=no&lang=es", function(osaka){
-        let horal = osaka.location.localtime.split(" ")
-        $("#hora2").prop("innerText", horal[1])
-        $("#tempok").prop("innerText", osaka.current.temp_c + "° C")
-        $("#sensok").prop("innerText", osaka.current.feelslike_c + "° C")
-        $("#condok").prop("innerText", osaka.current.condition.text)
+        let horal = osaka.location.localtime.split(" ") //parte el string donde hay un espacio
+        $("#hora2").prop("innerText", horal[1])     //toma solo la parte de la hora y descarta la fecha
+        $("#tempok").prop("innerText", osaka.current.temp_c + "° C") //muestra la información en los campos 
+        $("#sensok").prop("innerText", osaka.current.feelslike_c + "° C") //correspondientes tomando del
+        $("#condok").prop("innerText", osaka.current.condition.text) //Json en los valores deseados
         $("#imgok").prop("src", osaka.current.condition.icon)
     })
     $.get("http://api.weatherapi.com/v1/current.json?key=bd715aa1d05f48d8a8643645232004&q=buenos aires&aqi=no&lang=es", function(bsas){
-        let horal = bsas.location.localtime.split(" ")
-        $("#hora1").prop("innerText", horal[1])
+        let horal = bsas.location.localtime.split(" ") //idem al get anterior, el formateo y la toma de los
+        $("#hora1").prop("innerText", horal[1])        //datos deseados
         $("#tempba").prop("innerText", bsas.current.temp_c + "° C")
         $("#sensba").prop("innerText", bsas.current.feelslike_c + "° C")
         $("#condba").prop("innerText", bsas.current.condition.text)
         $("#imgba").prop("src", bsas.current.condition.icon)
     })  
 });
+
+
 
 $(document).ready(function(){
     $("#pasoanterior1").on("click", function(){ //código del boton paso siguiente del segundo paso del
@@ -45,13 +47,13 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    let chk1 = 1,  chk2 = 1
+    let chk1 = 1,  chk2 = 1   //variables para señalar el estado del check
     $("#celiaco").on("click", function(){
-        if (chk1==1){
+        if (chk1==1){               //luego descubri que puedo preguntar si el elemento .is(":checked")
             $("#cantceliacos").prop("disabled", false) 
             chk1=0
-        }
-        else{
+        }               //la idea de esta parte es vincular los campos de información adicional a los 
+        else{           //check correspondientes y hacer toggle de su estado disabled
             $("#cantceliacos").prop("disabled", true)
             chk1=1
         }
@@ -70,45 +72,45 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#siguientepaso1").on("click", function(){
-        var val = 0 
-        if($("#nombre").val() == ""){
+        var val = 0 //variable para corroborar que todas las validaciones estén correctas y recién entonces
+        if($("#nombre").val() == ""){ //avanzar a la siguiente etapa del formulario
             alert("El campo nombre es obligatorio, por favor ingrese su nombre")
-            $("#nombre").focus()
+            $("#nombre").focus()  //validacion de campo vacío y reseteo de variable bandera de validación
             val = 0
         }
-        else{
-            $("#rnombre").prop("innerText" , $("#nombre").prop("value"))
+        else{       //Cuando hay valor en campo trasladarlo a la sección del resumen y marcar la bandera
+            $("#rnombre").prop("innerText" , $("#nombre").prop("value")) //como validada 
             val += 1
         }
-        if($("#apellido").val() == ""){
+        if($("#apellido").val() == ""){  //valida campo vacío 
             alert("El campo apellido es obligatorio, por favor ingrese su apellido")
             $("#apellido").focus()
             val = 0
         }
-        else{
+        else{       //traslada valor a resumen
             $("#rapellido").prop("innerText" , $("#apellido").prop("value"))
             val += 1
         }
         $("#remail").prop("innerText" , $("#email").prop("value"))
-        if($("#tel").val() == "" || isNaN($("#tel").val())){
+        if($("#tel").val() == "" || isNaN($("#tel").val())){ //valida campo vacío y que sea numérico
             alert("El campo teléfono es obligatorio, por favor ingrese un número válido")
-            $("#tel").focus()
-            val = 0
+            $("#tel").focus() //cada uno de estos focus es para que ponga el foco en el campo a llenar o 
+            val = 0             //modificar 
         }
         else{
             $("#rtel").prop("innerText" , $("#tel").prop("value"))
             val += 1
         }
-        if (val == 3){
-            $(".PrimerPaso").hide()
-            $(".SegundoPaso").show()
+        if (val == 3){  //cuando todos los campos devuelven que la validacion es correcta recién ahí el 
+            $(".PrimerPaso").hide() //valor de val es el que permite el avance ocultando la etapa actual 
+            $(".SegundoPaso").show() //y mostrando la siguiente 
         }                                                                
     })
 });
 
 $(document).ready(function(){
-    $("#pasoanterior2").on("click", function(){
-        $(".SegundoPaso").show()
+    $("#pasoanterior2").on("click", function(){  //Para volver al paso anterior, oculta y muestra
+        $(".SegundoPaso").show()                //lo correspondiente
         $(".Resumen").hide()
     })
 });

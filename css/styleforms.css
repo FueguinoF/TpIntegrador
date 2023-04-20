@@ -3,7 +3,8 @@
  
 }
 .container{
-    background-color: black;
+    /*background-color: black;*/
+    background-image: url(../img/bkg_03.jpg);
     color: #fff;
     font-family: montserrat;
     font-weight: 400;
@@ -23,6 +24,10 @@
     padding: 6px;
     margin-top: 6px;
     margin-bottom: 6px;
+}
+
+.container input::placeholder{
+    color: rgb(121, 14, 14);
 }
 
 
